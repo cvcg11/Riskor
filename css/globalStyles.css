@@ -1,0 +1,42 @@
+/*NO TOCAR, si es necesaria una modificación consultar*/
+
+/*
+    Para implementar esta clase a sus archivos css ingresar:
+
+    @import url('globalStyles.css');
+
+*/
+
+/*API de fuente de google*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--color-background-interface);
+}
+
+/*
+    Variables de la hoja de estilos global
+    ":root" permite que las variables sean de acceso global, para solo invocarlas.
+
+    Desde root se declaran las variables como (--Nombre: Valor)
+*/
+
+:root{
+    --color-bg-int: #f2f7ff;                    /*Color del fondo de cada interfaz*/
+    --color-txt: #81859E;                       /*Color de texto simple.                Ej. Texto ingresado en formulario*/
+    --color-txt-title: #5E6489;                 /*Color de titulos.                     Ej. Títulos de tablas, título de pregunta de formulario, etc.*/
+    --color-bg-tb: rgba(254, 254, 255, 0.9);    /*Color del fondo de las tablas.        Ej. Empleados, Mantenimientos, etc.*/
+    --color-neutral: #FFFFFF;                   /*Color neutro que implica muchos tipos de elementos, blanco.*/
+
+    --color-btn-primary: linear-gradient(134deg,rgba(120, 132, 237, 1) 0%, rgba(97, 111, 239, 1) 100%); /*Color de la mayoria de botones*/
+    --color-border-btn-ghost: #7884ED;          /*Color de los bordes de los botones fantasma. Ej. "Detalles", "Editar", etc.*/
+
+    --shadow-pnl: 3px 3px 8px 0px rgba(100, 173, 211, 0.45);
+    --shadow-btn-primary: 0px 0px 15px 1px rgba(120, 132, 237, 0.65);   /*Sombra utilizada en los botones principales.      Ej. "Agregar", "Enviar", etc.*/
+    --shadow-btn-secondary: 0px 0px 5px 1px rgba(120, 132, 237, 0.45);  /*Sombra utilizada en los botones secundarios.      Ej. "Evidencias", "Buscar", etc.*/
+    --shadow-pnl-container: 5px 5px 4px 0px rgba(140, 158, 200, 0.35);  /*Sombra del contenedor que muestra los paneles.    Ej. Capacitaciones, Permisos, Regulaciones, etc.*/
+
+}
