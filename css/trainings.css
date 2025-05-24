@@ -1,0 +1,124 @@
+@import url('globalStyles.css');
+
+body{
+    --width-container: clamp(300px, 100%, 1500px); /*Ancho del contenedor*/
+    --bg-containers: #FEFEFF77;
+}
+
+h1{
+    color: var(--color-breadcrumb);
+    padding: 1rem 0;                                   
+    font-size: 2.2em;                                           
+    font-weight: 600;     
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100dvh;
+    padding: 20px;
+}
+
+.headerContent{
+    width: var(--width-container);
+    display: flex;
+    flex-direction: column;
+}
+
+.headerContentButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 0 0 0;
+}
+
+.searchContainer{
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--bg-containers);
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px #0004;
+}
+
+#txtSearch{
+    padding: 12px;
+    border-radius: 5px;
+    border: solid 1px #7B96C7;
+    flex: 5;
+}
+
+#btnFilter{
+    background-color: transparent;
+    border: none;
+}
+
+.bodyContent{
+    flex: 1;
+    background-color: var(--bg-containers);
+    width: var(--width-container);
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.containerTraining{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    height: 100%;
+}
+
+.training{
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px #0004;
+    height: 33%;
+}
+
+.trainingName{
+    color: var(--color-txt);
+    font-weight: 600;
+    font-size: 1.6em;
+}
+
+.containerTrainingUsers{
+    display: flex;
+}
+
+.containerMoreInfoTraining{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.userTraining{
+    width: 60px;
+    position: relative;
+}
+
+.user1{
+    left: 10%;
+    z-index: 20;
+}
+
+.user2{
+    z-index: 10;
+}
+
+.user3{
+    right: 10%;
+}
