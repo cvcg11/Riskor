@@ -12,21 +12,22 @@
     <main>
         <div class="content">
             <div class="breadcrumb"> <!--Div que contendrá el breadcrumb-->
-                <a href="medicalRecords.html">Expedientes médicos</a>
+                <a href="employee.html">Empleados</a>
             </div>
 
             <div class="top-bar">
                 <div class="search-container">
                     <input type="text" id="searchInput" placeholder="Buscar empleado..." />
-                    <button onclick="buscarEmpleado()">Buscar</button>
+                    <button onclick="searchEmployee()">Buscar</button>
                 </div>
-                <button class="btn-primary" onclick="registrarEmpleado()">Registrar empleado</button>
+                <button class="btn-primary" onclick="addEmployee()">Registrar empleado</button>
+                <!--Iconos-->
                 <div class="icons">
-                    <img src="../media/Vector (1).png" alt="Notificaciones" />
+                    <img src="../media/Vector (1).svg" alt="Notificaciones" />
                     <img src="../media/Frame 59.png" alt="Perfil" />
                 </div>
             </div>
-
+<!--Creación de la tabla empleados-->
             <div class="table-container">
                 <table>
                     <thead>
@@ -39,11 +40,12 @@
                         </tr>
                     </thead>
                     <tbody id="employeeTableBody">
-                        <!-- Datos serán insertados aquí dinámicamente -->
+                        <!-- Datos mostrados en el archivo js -->
                     </tbody>
                 </table>
             </div>
         </div>
+        
     </main>
 
     <script src="../js/employee.js"></script>

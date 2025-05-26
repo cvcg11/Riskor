@@ -1,4 +1,4 @@
-@import url('globalStyles.css');
+@import url('globalStyles.css'); /*Se importa el estilo principal del sitio web*/
 
 .breadcrumb{
     padding: 3rem 4.5rem;                                       /*Distancia de los bordes*/
@@ -100,3 +100,5 @@ td img {
 tr:hover {
   background-color: #f9f9f9;
 }
+
+/*Formulario de registro*/

@@ -1,4 +1,4 @@
-const empleados = [
+const employees = [ /*Variable que registra los empleados*/
   {
     dui: '12345678-9',
     nombre: 'José Maximiliano Fernández',
@@ -18,11 +18,11 @@ const empleados = [
     cargo: 'Contador',
   },
 ];
-
-function cargarTabla() {
+/*Datos cargados de la tabla*/
+function refreshTable() {
   const cuerpo = document.getElementById('employeeTableBody');
   cuerpo.innerHTML = '';
-  empleados.forEach((e) => {
+  employees.forEach((e) => {
     cuerpo.innerHTML += `
       <tr>
         <td>${e.dui}</td>
@@ -30,20 +30,20 @@ function cargarTabla() {
         <td>${e.correo}</td>
         <td>${e.cargo}</td>
         <td>
-          <img src="../media/view.svg" title="Ver">
-          <img src="../media/edit.svg" title="Editar">
-          <img src="../media/delete.svg" title="Eliminar">
+           <img src="../media/famicons_eye-sharp.svg" title="Ver">
+            <img src="../media/ri_edit-fill.svg" title="Editar">
+            <img src="../media/Vector.svg" title="Eliminar">
         </td>
       </tr>
     `;
   });
 }
-
-function buscarEmpleado() {
+/*Función de busqueda segun los registros de la tabla*/
+function searchEmployee() {
   const texto = document.getElementById('searchInput').value.toLowerCase();
   const cuerpo = document.getElementById('employeeTableBody');
   cuerpo.innerHTML = '';
-  empleados
+  employees
     .filter((e) => e.nombre.toLowerCase().includes(texto))
     .forEach((e) => {
       cuerpo.innerHTML += `
@@ -53,18 +53,18 @@ function buscarEmpleado() {
           <td>${e.correo}</td>
           <td>${e.cargo}</td>
           <td>
-            <img src="../media/famicons_eye-sharp.png" title="Ver">
-            <img src="../media/ic_outline-search.png" title="Editar">
-            <img src="../media/Vector.png" title="Eliminar">
+            <img src="../media/famicons_eye-sharp.svg" title="Ver">
+            <img src="../media/ri_edit-fill.svg" title="Editar">
+            <img src="../media/Vector.svg" title="Eliminar">
           </td>
         </tr>
       `;
     });
 }
-
-function registrarEmpleado() {
-  alert('Redirigir al formulario de registro...');
+/*Función para agregar un nuevo empleado*/
+function addEmployee() {
+    
 }
 
 // Cargar tabla al inicio
-document.addEventListener('DOMContentLoaded', cargarTabla);
+document.addEventListener('DOMContentLoaded', refreshTable);
