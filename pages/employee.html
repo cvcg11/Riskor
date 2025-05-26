@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empleados</title>
+    <link rel="stylesheet" href="../css/employee.css" />
+</head>
+
+<body>
+    <main>
+        <div class="content">
+            <div class="breadcrumb"> <!--Div que contendrá el breadcrumb-->
+                <a href="medicalRecords.html">Expedientes médicos</a>
+            </div>
+
+            <div class="top-bar">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Buscar empleado..." />
+                    <button onclick="buscarEmpleado()">Buscar</button>
+                </div>
+                <button class="btn-primary" onclick="registrarEmpleado()">Registrar empleado</button>
+                <div class="icons">
+                    <img src="../media/Vector (1).png" alt="Notificaciones" />
+                    <img src="../media/Frame 59.png" alt="Perfil" />
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DUI</th>
+                            <th>Nombre completo</th>
+                            <th>Correo electrónico</th>
+                            <th>Cargo</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employeeTableBody">
+                        <!-- Datos serán insertados aquí dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/employee.js"></script>
+</body>
+
+</html>

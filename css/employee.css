@@ -1,0 +1,102 @@
+@import url('globalStyles.css');
+
+.breadcrumb{
+    padding: 3rem 4.5rem;                                       /*Distancia de los bordes*/
+    font-size: 2.2em;                                           /*Tamaño del título de la pag (Breadcrumb)*/
+    font-weight: 600;                                           /*Peso del titulo*/
+}
+
+.breadcrumb a{
+    text-decoration: none;                                      /*Cambiamos el estilo del enlace*/
+    color: var(--color-breadcrumb);                             /*Asignamos el color del breadcrumb segun var Global*/
+}
+
+.content {
+  padding: 2em;
+}
+
+.title {
+  color: #5a5fd9;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+.search-container {
+  display: flex;
+  gap: 0.5em;
+  flex: 1;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.search-container button {
+  background-color: #6b6bfa;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #6b6bfa;
+  color: white;
+  padding: 0.5em 1.2em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.icons img {
+  width: 30px;
+  margin-left: 1em;
+}
+
+.table-container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #dcdcdc;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f0f4ff;
+}
+
+th, td {
+  text-align: left;
+  padding: 1em;
+}
+
+td:last-child {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+td img {
+  cursor: pointer;
+  width: 20px;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
