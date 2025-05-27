@@ -1,7 +1,8 @@
 @import url('globalStyles.css'); /*Se importa el estilo principal del sitio web*/
 
-.breadcrumb{
-    padding: 3rem 4.5rem;                                       /*Distancia de los bordes*/
+
+.breadcrumb{           
+    margin-bottom: 2rem;                           /*Distancia de los bordes*/
     font-size: 2.2em;                                           /*Tamaño del título de la pag (Breadcrumb)*/
     font-weight: 600;                                           /*Peso del titulo*/
 }
@@ -100,5 +101,6 @@ td img {
 tr:hover {
   background-color: #f9f9f9;
 }
+
 
 /*Formulario de registro*/

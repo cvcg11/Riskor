@@ -55,6 +55,27 @@ body{
     font-size: 1.1em;                                           /*Tamaño de la letra*/
 }
 
+html,
+.contenedor-sidebar{
+  height: 100%;
+}
+
+.contenedor-sidebar{
+  display: flex;
+  width: 20%;
+  min-height: 0vh;
+}
+
+.contenedor-seccion{
+  display: flex;
+}
+
+.contenedor-cuerpo{
+  width: 100%;
+  padding: 1rem 0rem 0 1em; 
+}
+
+
 /*
     Variables agregadas:
         --color-btn-text: #F2F9FE;

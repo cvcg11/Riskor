@@ -5,11 +5,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Empleados</title>
-    <link rel="stylesheet" href="../css/employee.css" />
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/employee.css">
 </head>
 
 <body>
     <main>
+
+        <div class="contenedor-seccion">
+
+        <div class="contenedor-sidebar">
+         <nav id="sidebar"></nav>
+        </div>
+        
+        <div class="contenedor-cuerpo">
         <div class="content">
             <div class="breadcrumb"> <!--Div que contendrá el breadcrumb-->
                 <a href="employee.html">Empleados</a>
@@ -45,10 +54,12 @@
                 </table>
             </div>
         </div>
-        
+        </div>
+        </div>
     </main>
 
     <script src="../js/employee.js"></script>
+    <script src="../js/sidebar.js"></script>
 </body>
 
 </html>
