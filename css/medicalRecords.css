@@ -22,8 +22,6 @@
 
 
 
-
-
 /*Pendiente - Asignar el btn crear y searchBar*/
 .content{
     display: flex;
@@ -59,6 +57,9 @@
 }
 
 #txtSearch{
+    background-image: url('../media/globalMedia/searchbar-icon.svg');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
     padding: 12px;
     border-radius: 5px;
     border: solid 1px #7B96C7;
