@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-color: #EEF3FF;
+  --sidebar-color: linear-gradient(to right top, #F2F9FE, #F3F6FF);
+  --primary-color: #7884ed;
+  --primary-color-light: #;
+  --toggle-color: #;
+  --text-color: #81849E;
+  --button-color: #ffffff;
+
+  /* Transiciones */
+  --tran-03: all 0.4s;
+  --tran-04: all 0.4s;
+  --tran-05: all 0.4s;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background: var(--body-color);
+}
+
+/*===== Sidebar =====*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 25%;
+  min-width: 400px;
+  max-width: 400px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 5px 2px 6px #647ad380;
+  background: var(--sidebar-color);
+}
+
+.sidebar header {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .text {
+  font-size: 16px;
+  font: var(--text-color);
+}
+
+.sidebar .image {
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar li {
+  height: 45px;
+  margin: 20px 0 0 30px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6em;
+  font-weight: 500;
+}
+
+.sidebar li a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.95em;
+  gap: 0;
+  transition: var(--tran-04);
+  margin-right: 50px;
+  position: relative;
+  padding-left: 0px;
+}
+
+.sidebar li img {
+  min-width: 100px;
+  font-size: 5px;
+}
+
+.sidebar .links img {
+  height: 30px;
+  min-height: 25px;
+}
+
+.sidebar li a,
+.sidebar li span {
+  color: var(--text-color);
+}
+
+.sidebar li a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  filter: blur(0);
+  box-shadow: none;
+  pointer-events: none; /* para no interferir con el mouse */
+}
+
+.sidebar li a:hover::before {
+  background-color: var(--primary-color);
+  filter: blur(0.5px);
+  box-shadow: 0 0 8px var(--primary-color);
+}
+
+/*===== Superior Nav =====*/
+.superiorNav {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+  height: auto;
+}
+
+.superiorNav img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.hr-sidebar {
+  border: none;
+  height: 3px;
+  width: 70%;
+  background-color: #94ACDA;
+  margin-bottom: -10px;
+}
+
+/*===== User Container =====*/
+.userContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  height: clamp(70px, 15vh, 100px);
+  background: linear-gradient(to right bottom, #D7E3FF, #EEF3FF);
+}
+
+.navbarUserItem {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* <-- esto centra horizontalmente */
+    font-weight: 600;
+    font-size: 1.5em;
+    gap: 15px;
+}
+
+.navbarUserItem img{
+    width: 85px;
+}
+
+.navbarText {
+  color: #81859E;
+  opacity: 1;
+  width: 50%;
+  transition: opacity 0.5s ease;
+}
