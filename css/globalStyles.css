@@ -57,9 +57,18 @@ body{
   font-weight: 500;                                           /*Peso de la letra*/
   font-size: 1.1em;                                           /*Tamaño de la letra*/
   cursor: pointer;                                            /*El cursor cambiará al estar en el btn*/
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover{
+  --color-btn-primary: #6876f2;
+  background: var(--color-btn-primary); 
+  transform: translateY(-3px);          
+  box-shadow: var(--shadow-btn-primary);
 }
 
 #btnFilter:hover {
+  transform: translateY(-2px);
   cursor: pointer;
 }
 
