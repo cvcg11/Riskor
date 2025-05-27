@@ -42,19 +42,28 @@ body{
     --shadow-btn-secondary: 0px 0px 5px 1px rgba(120, 132, 237, 0.45);  /*Sombra utilizada en los botones secundarios.      Ej. "Evidencias", "Buscar", etc.*/
     --shadow-pnl-container: 5px 5px 4px 0px rgba(140, 158, 200, 0.35);  /*Sombra del contenedor que muestra los paneles.    Ej. Capacitaciones, Permisos, Regulaciones, etc.*/
     --shadow-pnl: 2px 2px 4px 0px rgba(133, 155, 208, 0.25);            /*Sombra de los paneles dentro de los contenedores  Ej. Registros médicos, Permisos área de la empresa, etc.*/
+    --shadow-search-container: 4px 4px 3px 0px rgba(140, 158, 200, 0.25); /*Sombra de los contenedores de búsqueda          Ej. Regulaciones, Áreas, etc.*/
 
+    --width-container: 90%;
 }
 
+/*Botón primario*/
 .btn-primary{
-    background: var(--color-btn-primary);                       /*Gradiente del fondo del btn*/
-    border: 0px;                                                /*Quitamos el borde del botón (El primario no lo necesita)*/
-    border-radius: 12px;                                        /*Redondeo de esquinas de 12px*/
-    box-shadow: var(--shadow-btn-primary);                      /*Sombra del btn reutilizada con las var globales*/
-    color: var(--color-btn-text);                               /*Color del texto del btn*/
-    font-weight: 500;                                           /*Peso de la letra*/
-    font-size: 1.1em;                                           /*Tamaño de la letra*/
+  background: var(--color-btn-primary);                       /*Gradiente del fondo del btn*/
+  border: 0px;                                                /*Quitamos el borde del botón (El primario no lo necesita)*/
+  border-radius: 12px;                                        /*Redondeo de esquinas de 12px*/
+  box-shadow: var(--shadow-btn-primary);                      /*Sombra del btn reutilizada con las var globales*/
+  color: var(--color-btn-text);                               /*Color del texto del btn*/
+  font-weight: 500;                                           /*Peso de la letra*/
+  font-size: 1.1em;                                           /*Tamaño de la letra*/
+  cursor: pointer;                                            /*El cursor cambiará al estar en el btn*/
 }
 
+#btnFilter:hover {
+  cursor: pointer;
+}
+
+/*Sidebar*/
 html,
 .contenedor-sidebar{
   height: 100%;
@@ -74,7 +83,6 @@ html,
   width: 100%;
   padding: 1rem 0rem 0 1em; 
 }
-
 
 /*
     Variables agregadas:

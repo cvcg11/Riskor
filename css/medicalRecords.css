@@ -1,15 +1,7 @@
-@import url('globalStyles.css');
-
-/*
-.interfaceHeader{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-*/    
+@import url('globalStyles.css');  
 
 .breadcrumb{
-    padding: 3rem 4.5rem;                                       /*Distancia de los bordes*/
+    padding: 1rem 0;                                            /*Distancia de los bordes*/
     font-size: 2.2em;                                           /*Tamaño del título de la pag (Breadcrumb)*/
     font-weight: 600;                                           /*Peso del titulo*/
 }
@@ -27,10 +19,55 @@
     margin-bottom: 3em;
 }
 
-/*Botón heredado de clase global*/
-.btn-primary{
-    height: 3.5em;                                              /*Altura del btn*/
-    width: 12em;                                                /*Ancho del btn*/
+
+
+
+
+
+/*Pendiente - Asignar el btn crear y searchBar*/
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.headerContent{
+    width: var(--width-container);
+    display: flex;
+    flex-direction: column;
+}
+
+.headerContentButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 0 1rem 0;
+}
+
+.searchContainer{
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--bg-containers);
+    border-radius: 12px;
+    box-shadow: var(--shadow-search-container);
+}
+
+#txtSearch{
+    padding: 12px;
+    border-radius: 5px;
+    border: solid 1px #7B96C7;
+    flex: 5;
+}
+
+#btnFilter{
+    background-color: transparent;
+    border: none;
 }
 
 .btn-primary:hover{
@@ -42,14 +79,14 @@
 /*Contenedor de contenido por debajo del botón*/
 .card-container{
     display: flex;                                              /*Uso de flexbox*/
-    align-content: space-evenly;                                /*Distancia del contenedor con el resto de la interfaz bien distribuida*/
     align-items: center;                                        /*Centrar el div*/
     flex-direction: column;                                     /*Evito que se hagan a los lados por cada registro y se vean como columna*/
+    width: var(--width-container);                                                 /*El contenedor de paneles usará el 85% del espacio que se le asigne*/
 }
 
 /*Contenedor de paneles*/
 .pnl-container{
-    width: 85%;                                                 /*El contenedor de paneles usará el 85% del espacio que se le asigne*/
+    width: 100%;
     border-radius: 12px;                                        /*Redondeo de esquinas de 12px*/
     padding: 20px;
     --color-bg-tb: rgba(254, 254, 255, 0.35);                 /*Se modifica la variable global solamente cambiando la transparencia*/  
