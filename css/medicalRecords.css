@@ -42,7 +42,6 @@
     align-items: center;
     padding: 5rem 0 1rem 0;
 }
-    */
 
 .searchContainer{
     display: flex;
@@ -55,6 +54,8 @@
     border-radius: 12px;
     box-shadow: var(--shadow-search-container);
 }
+    */
+
 
 #txtSearch{
     background-image: url('../media/globalMedia/searchbar-icon.svg');
@@ -65,6 +66,8 @@
     border: solid 1px #7B96C7;
     flex: 5;
     padding-left: 45px;
+    font-size: 1em;
+    color: var(--color-txt);
 }
 
 #txtSearch:focus {
@@ -73,12 +76,6 @@
   color: var(--color-txt);
   outline: none;
   border: 1px solid var(--color-txt);
-}
-
-#btnFilter{
-    background-color: transparent;
-    border: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /*Contenedor de contenido por debajo del botón
@@ -108,29 +105,10 @@
 }
 */
 
-
 /*Clase para eliminar la decoración del enlace*/
 .recordEmployee{
     text-decoration: none;
     color: var(--color-txt);                                    
-}
-
-.Employee{
-    display: flex;                                              
-    align-items: center;                                        /*Centra los elementos, Evitando que la img y la flecha se vayan hacia arriba*/
-    font-weight: 500;                                          
-    font-size: 1.2em;                                           
-    padding: 1em 1.2em;                                         
-    border-radius: 12px;                                        
-    box-shadow: var(--shadow-pnl);                              
-    margin-bottom: 0.7em;                                       /*Distancia entre un panel a otro*/
-    background-color: var(--color-neutral);                     /*Color del panel neutro (Blanco por defecto)*/
-    transition: transform 0.3s ease, box-shadow 0.3s ease;      /*Animación de regreso una vez termine hover*/
-}
-
-.Employee:hover {
-    transform: translateY(-4px);                                /*Levanta un poco */
-    box-shadow: 0 5px 10px rgba(133, 155, 208, 0.3);          /*Sombra más fuerte */
 }
 
 .info{
