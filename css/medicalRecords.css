@@ -1,25 +1,14 @@
 @import url('globalStyles.css');  
 
-.breadcrumb{
-    padding: 1rem 0;                                            
-    font-size: 2.2em;                                           /*Tamaño del título de la pag (Breadcrumb)*/
-    font-weight: 600;                                           
-}
-
-.breadcrumb a{
-    text-decoration: none;                                      
-    color: var(--color-breadcrumb);                             /*Asignamos el color del breadcrumb segun var Global*/
-}
-
 /*Contenedor padre del btn primario*/
-.container-btn-primary{             
+.containerBtnPrimary{             
     display: flex;                                               
     justify-content: flex-end;                                  /*Enviar el btn al final*/
     padding-right: 5em;                                         /*Este atributo y el siguiente son para distanciar el botón del contenedor y del borde*/
     margin-bottom: 3em;
 }
 
-/*Asignar el btn crear y searchBar*/
+/*Asignar el btn crear y searchBar
 .content{
     display: flex;
     flex-direction: column;
@@ -27,6 +16,7 @@
     gap: 20px;
     padding: 20px;
 }
+    
 
 .headerContent{
     width: var(--width-container);
@@ -34,12 +24,25 @@
     flex-direction: column;
 }
 
+.breadcrumb{
+    padding: 1rem 0;                                            
+    font-size: 2.2em;                                           
+    font-weight: 600;                                           
+}
+
+.breadcrumb a{
+    text-decoration: none;                                      
+    color: var(--color-breadcrumb);                             
+}
+    
+
 .headerContentButtons{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5rem 0 1rem 0;
 }
+    */
 
 .searchContainer{
     display: flex;
@@ -78,31 +81,33 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/*Contenedor de contenido por debajo del botón*/
-.card-container{
+/*Contenedor de contenido por debajo del botón
+.cardContainer{
     display: flex;                                              
-    align-items: center;                                        /*Centrar el div*/
-    flex-direction: column;                                     /*Evito que se hagan a los lados por cada registro y se vean como columna*/
-    width: var(--width-container);                              /*El contenedor de paneles usará el 85% del espacio que se le asigne*/
+    align-items: center;                                        /*Centrar el div
+    flex-direction: column;                                     /*Evito que se hagan a los lados por cada registro y se vean como columna
+    width: var(--width-container);                              /*El contenedor de paneles usará el 85% del espacio que se le asigne
 }
 
-/*Contenedor de paneles*/
-.pnl-container{
+/*Contenedor de paneles
+.pnlContainer{
     width: 100%;
     border-radius: 12px;                                        
     padding: 20px;
-    --color-bg-tb: rgba(254, 254, 255, 0.35);                 /*Se modifica la variable global solamente cambiando la transparencia*/  
-    background-color: var(--color-bg-tb);                       /*Color del contenedor (Neutro y semi-transparente)*/
+    --color-bg-tb: rgba(254, 254, 255, 0.35);                 /*Se modifica la variable global solamente cambiando la transparencia
+    background-color: var(--color-bg-tb);                       /*Color del contenedor (Neutro y semi-transparente)
     box-shadow: var(--shadow-pnl-container);                    
-    height: 60vh;                                               /*Altura del contenedor*/
-    overflow: auto;                                             /*Crear scroll dentro de panel*/
-    scrollbar-width: none;                                      /*Ocultar scrollbar interna del contenedor: Firefox */
-    -ms-overflow-style: none;                                   /*Ocultar scrollbar interna del contenedor: Explorer */
+    height: 60vh;                                               /*Altura del contenedor
+    overflow: auto;                                             /*Crear scroll dentro de panel
+    scrollbar-width: none;                                      /*Ocultar scrollbar interna del contenedor: Firefox 
+    -ms-overflow-style: none;                                   /*Ocultar scrollbar interna del contenedor: Explorer 
 }
 
-.pnl-container::-webkit-scrollbar {
-    display: none;                                              /*Ocultar scrollbar interna del contenedor:  Chrome, Safari y Edge */
+.pnlContainer::-webkit-scrollbar {
+    display: none;                                              /*Ocultar scrollbar interna del contenedor:  Chrome, Safari y Edge 
 }
+*/
+
 
 /*Clase para eliminar la decoración del enlace*/
 .recordEmployee{

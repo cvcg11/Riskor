@@ -24,6 +24,8 @@ body{
     Desde root se declaran las variables como (--Nombre: Valor)
 */
 
+
+/*No tocar*/
 :root{
     --color-bg-int: #f2f7ff;                    /*Color del fondo de cada interfaz*/
     --color-txt: #81859E;                       /*Color de texto simple.                Ej. Texto ingresado en formulario*/
@@ -44,7 +46,7 @@ body{
     --shadow-pnl: 2px 2px 4px 0px rgba(133, 155, 208, 0.25);            /*Sombra de los paneles dentro de los contenedores  Ej. Registros médicos, Permisos área de la empresa, etc.*/
     --shadow-search-container: 4px 4px 3px 0px rgba(140, 158, 200, 0.25); /*Sombra de los contenedores de búsqueda          Ej. Regulaciones, Áreas, etc.*/
 
-    --width-container: 90%;
+    --width-container: 90%;                       /*Tamaño del contenedor de todo el contenido    Ej. Clases: ["card-container", "headerContent"]*/
 }
 
 /*Botón primario*/
@@ -94,17 +96,91 @@ html,
 }
 
 /*
+  ESTRUCTURA <HTML> DE CONTENIDO - Interfaces principales
+  ------------------------------------------------------------
+
+  content 
+    headerContent 
+      breadcrumb 
+      /breadcrumb 
+      headerContentButtons 
+      /headerContentButtons 
+    /headerContent 
+    cardContainer 
+      pnlContainer 
+        PANELS
+      /pnlContainer
+    /cardContainer 
+  /content 
+
+*/
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.headerContent{
+    width: var(--width-container);
+    display: flex;
+    flex-direction: column;
+}
+
+.breadcrumb{
+    padding: 1rem 0;                                            
+    font-size: 2.2em;                                           
+    font-weight: 600;                                           
+}
+
+.breadcrumb a{
+    text-decoration: none;                                      
+    color: var(--color-breadcrumb);                             
+}
+
+.headerContentButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 0 1rem 0;
+}
+
+.cardContainer{
+    display: flex;                                              
+    align-items: center;                                        /*Centrar el div*/
+    width: var(--width-container);                              /*El contenedor de paneles usará el 90% del espacio que se le asigne*/
+}
+
+.pnlContainer{
+    width: 100%;
+    border-radius: 12px;                                        
+    padding: 20px;
+    --color-bg-tb: rgba(254, 254, 255, 0.35);                 /*Se modifica la variable global solamente cambiando la transparencia*/  
+    background-color: var(--color-bg-tb);                       /*Color del contenedor (Neutro y semi-transparente)*/
+    box-shadow: var(--shadow-pnl-container);                    
+    height: 60vh;                                               /*Altura del contenedor*/
+    overflow: auto;                                             /*Crear scroll dentro de panel*/
+    scrollbar-width: none;                                      /*Ocultar scrollbar interna del contenedor: Firefox */
+    -ms-overflow-style: none;                                   /*Ocultar scrollbar interna del contenedor: Explorer */
+}
+
+.pnlContainer::-webkit-scrollbar {
+    display: none;                                              /*Ocultar scrollbar interna del contenedor:  Chrome, Safari y Edge */
+}
+
+/*
     Variables agregadas:
         --color-btn-text: #F2F9FE;
         --shadow-pnl: 2px 2px 4px 0px rgba(133, 155, 208, 0.25);
         --color-img-border 3px solid #8F90DE;
+        --width-container: 90%;
 */  
 
 /*
-    Clases necesarias aplicar a globales:
-        -Titulo de apartado.
-        -Contentedor de paneles.
-        -Paneles básicos como Permisos, Incapacidad, etc.
-        -Tablas commo Empleado, CSSO, etc.
-        -Apartado de busqueda
+  clase contenedores de tarjetas/paneles (bodyContent, pagina training)
+  clase para inputs globales
+  clase contenedor sombra que esta atras de los modales
+  clase titulos globales
 */
