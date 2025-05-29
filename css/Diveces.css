@@ -1,0 +1,59 @@
+@import url('globalStyles.css');
+/* Se importa el estilo principal del sitio web */
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;  
+    overflow: auto;
+    transition: all 0.4s;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid var(--color-txt-title);
+    margin-bottom: 10px;
+}
+
+.tab {
+    padding: 10px 20px;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-txt-title);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    text-align: center;
+    flex: 1;
+}
+
+
+.tab.active {
+    border-bottom: 3px solid var(--color-txt-title);
+    color: var(--color-accent, #007bff);
+    font-weight: bolder;
+}
+
+.tabContent {
+    display: none;
+}
+
+.tabContent.active {
+    display: block;
+}
+
+.breadcrumb {
+    width: 100%;
+    max-width: var(--width-container);
+    padding: 1rem 0;
+    font-size: var(--font-size-title);
+    font-weight: 600;
+}

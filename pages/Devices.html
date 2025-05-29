@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Dispositivos</title>
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/Diveces.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="sidebar">
+            <nav id="sidebar"></nav>
+        </div>
+
+        <main class="content">
+            <div class="breadcrumb" aria-label="breadcrumb">
+                <a href="Devices.html">Control de dispositivos</a>
+            </div>
+            <section class="DivicesContent">
+
+                <div class="tabs">
+                    <div>
+                        <button class=" tab active" data-tab="todos">Todos</button>
+                    </div>
+                    <div>
+                        <button class=" tab" data-tab="salud">Salud</button>
+                    </div>
+                    <div>
+                        <button class=" tab" data-tab="sistemas">Sistemas</button>
+                    </div>
+                </div>
+
+                <div class="tabContentContainer">
+                    <div id="todos" class="tabContent active">
+                        <p>Contenido Todos</p>
+                    </div>
+                    <div id="salud" class="tabContent">
+                        <p>Contenido Salud</p>
+                    </div>
+                    <div id="sistemas" class="tabContent">
+                        <p>Contenido Sistemas</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/Diveces.js"></script>
+    <script src="../js/sidebar.js"></script>
+</body>
+
+</html>
